@@ -3,16 +3,14 @@
 
 #include <vector>
 #include <cmath> // for floor()
-#include <utility> //for swap()
 
 template <typename T>
 class Heap {
  private:
   void heapify(int);
-
+  std::vector<T> values; //put in private before submit
  public:
   Heap();  // constructs an empty heap
-  std::vector<T> values; //put in private before submit
   // constructs a heap with the values from the given vector
   // the type T MUST provide comparison operators <, >, ==
   Heap(std::vector<T>);
